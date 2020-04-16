@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/Portal-Afiliado/Media/imgs/favicon.ico">
+    <title>AFP Modelo</title> <!-- ########################### --> <!--     CSS Y SCRIPTS BOT       --> <!-- ########################### --> <!--font awesome-->
+    <link href="/Portal-Afiliado/Media/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link href="/Portal-Afiliado/Media/css/estilos-menu.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Portal-Afiliado/Media/css/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="/Portal-Afiliado/Media/css/sweet-alert.css">
+    <script type="text/javascript" src="/Portal-Afiliado/Media/js/sweet-alert.min.js"></script>
+    <link href="/Portal-Afiliado/Media/css/yamm.css" rel="stylesheet" type="text/css">
+    <link href="/Portal-Afiliado/Media/css/menu.css" rel="stylesheet" type="text/css">
+    <link href="/Portal-Afiliado/Media/css/pace-theme-porc.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/Portal-Afiliado/Media/js/jquery-1.10.2.min.js"></script>
+    <style id="holderjs-style" type="text/css"></style> <!--font awesome-->
+    <link href="/Portal-Afiliado/Media/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/Portal-Afiliado/Media/css/font-awesome.css" rel="stylesheet"> <!-- Bootstrap core CSS -->
+    <link href="/Portal-Afiliado/Media/css/bootstrap.css" rel="stylesheet">
+    <link href="/Portal-Afiliado/Media/css/estilos.css" rel="stylesheet">
+    <link href="/Portal-Afiliado/Media/css/fonts.css" rel="stylesheet">
+    <link href="/Portal-Afiliado/Media/css/animate-custom.css" rel="stylesheet" type="text/css"> <!--<link href="css/yamm.css" rel="stylesheet" type="text/css">-->
+    <link href="/Portal-Afiliado/Media/css/demo.css" rel="stylesheet" type="text/css">
+    <link href="/Portal-Afiliado/Media/css/fuenteafpmodelo.css" rel="stylesheet" type="text/css">
+    <link href="/Portal-Afiliado/Media/css/estilos-menu.css" rel="stylesheet" type="text/css">
+    <link href="/Portal-Afiliado/Media/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href="/Portal-Afiliado/Media/css/component.css" rel="stylesheet" type="text/css"> <!--<link href="css/menu.css" rel="stylesheet" type="text/css">-->
+    <link href="/Portal-Afiliado/Media/css/media.css" rel="stylesheet" type="text/css"> <!--menufication-->
+    <link rel="stylesheet" type="text/css" href="/Portal-Afiliado/Media/css/menufication.min.css">
+    <script src="/Portal-Afiliado/Media/js/jquery.min.js.descarga"></script>
+    <script src="/Portal-Afiliado/Media/js/jquery.menufication.min.js" type="text/javascript"></script>
+    <script src="/Portal-Afiliado/Media/js/jquery.menufication.min.js.descarga"></script> <!--sweet alert-->
+    <script src="/Portal-Afiliado/Media/js/sweetalert.min.js.descarga"></script>
+    <link rel="stylesheet" type="text/css" href="/Portal-Afiliado/Media/css/sweetalert.css"> <!-- Tooltipster(2) -->
+    <link rel="stylesheet" type="text/css" href="/Portal-Afiliado/Media/css/tooltipster.css">
+    <script type="text/javascript" src="/Portal-Afiliado/Media/js/jquery.tooltipster.min.js.descarga"></script>
+    <style type="text/css">
+
+        .svg-inline--fa.fa-w-16 {
+            width: 1em;
+        }
+
+
+        .ico-userafp {
+            color: white;
+            font-size: 30px;
+            line-height: 50px;
+            position: relative;
+            top: 4px;
+        }
+
+        .svg-inline--fa {
+            display: inline-block;
+            font-size: inherit;
+            height: 1em;
+            overflow: visible;
+            vertical-align: -.125em;
+        }
+
+        .usuarios-log {
+            height: 60px;
+        }
+
+        .awesome-ico {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background: #96c03d;
+            display: inline-block;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .cursor-icono {
+            cursor: pointer;
+        }
+
+        .badge {
+            display: inline-block;
+            min-width: 10px;
+            padding: 3px 5px;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1;
+            color: #ffffff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: text-top;
+            background-color: #F00;
+            border-radius: 10px;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: -15px;
+        }
+
+        .nav {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        .section-user {
+            position: relative;
+            display: inline-block;
+            top: 18px;
+            color: white;
+            margin-left: 5px;
+
+
+        }
+
+    </style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-57190214-1', 'auto', { 'allowLinker': true });
+        ga('require', 'linker');
+        ga('linker:autoLink', ['www.aumentatusueldo.cl']);
+        ga('send', 'pageview');
+
+
+    </script>
+    <script type="text/javascript">
+        function setAuthToken(token) {
+            console.log("function setAuthToken...");
+
+            var mmmmod2 = window.modelovue;
+            mmmmod2.$root.$children[0].setAuthToken(token);
+        }
+
+        function removeAuthToken() {
+            console.log("function removeAuthToken...");
+
+            var mmmmod2 = window.modelovue;
+            mmmmod2.$root.$children[0].removeAuthToken();
+        }
+
+        function clearBotData() {
+            console.log("function clearBotData...");
+
+            var mmmmod2 = window.modelovue;
+            mmmmod2.$root.$children[0].clear();
+        }
+    </script>
+</head>
+<body>
+<script>        (function () {
+    var _fbq = window._fbq || (window._fbq = []);
+    if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+    }
+    _fbq.push(['addPixelId', '456613967814144']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript>
+    <img height="1" width="1" alt="" style="display: none" src="https://www.facebook.com/tr?id=456613967814144&amp;ev=PixelInitialized">
+</noscript>
+<div class="importante">
+    <div class="container">
+        <div class="container">
+            <div class="col-xs-12">
+                <div class="col-xs-12 col-md-6 padding0">
+                    <img class="logo-box img-responsive" src="/Portal-Afiliado/Media/imgs/afp_modelo.png" alt="afp Modelo">
+                </div>
+                <div class="col-xs-6 hidden-xs hidden-sm">
+                    <div class="col-xs-10">
+                        <div class="usuarios-log">
+                            <ul class="nav navbar-nav navbar-right cursor-icono">
+                                <li class="dropdown2 padding0"> <span class="awesome-ico"><a href="/Portal-Afiliado/Notificaciones/Notificaciones.aspx"><i class="fa fa-user ico-userafp" aria-hidden="true"></i></a></span> <span class="badge"><a href="/Portal-Afiliado/Notificaciones/Notificaciones.aspx"><span id="lbl_noleidos" style="color: White; font-size:larger;">1</span></a> </span> </li>
+                                <li class="dropdown2 padding0"> <span class="section-user"><span id="lbl_nombre">Paula Nicole González</span> &nbsp;
+            <svg class="svg-inline--fa fa-chevron-down fa-w-14 fa-lg" aria-hidden="true" data-prefix="fa" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" data-fa-i2svg="">
+             <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+            </svg><!-- <i class="fa fa-chevron-down fa-lg"></i> --> </span>
+                                    <ul class="dropdown-menu dropdown-usuario nombre-sesion" style="margin-top: 19px; display: none;" role="menu">
+                                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Modificar-datos-personales.aspx"><span class="font-sesion">Mis datos personales</span></a></li>
+                                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Cambiar-Clave-de-Acceso-Web.aspx" "><span class="font-sesion">Cambiar mi Clave Web</span></a></li>
+                                        <li><a href="/Portal-Afiliado/Notificaciones/Notificaciones.aspx"><span class="font-sesion">Mis notificaciones</span> <span class="label  label-success"><span id="lbl_contador">1</span></span></a></li>
+                                        <li><a href="https://www.afpmodelo.cl/AFP/Home.aspx"><span class="font-sesion">Cerrar sesión <i class="fas fa-power-off power-off"></i></span></a></li>
+                                    </ul> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- Menu mobile -->
+<div id="my-menu">
+    <ul id="menu" class="hidden-lg hidden-md hidden-xs hidden-sm"> <!--Mi Cuenta-->
+        <li><a href="#">Mis ahorros</a> </li>
+        <li><a href="/Portal-Afiliado/Mi-cuenta/Estado-de-cuenta.aspx">Estado de cuenta</a></li>
+        <li><a href="/Portal-Afiliado/Mi-cuenta/Ultimos-movimientos.aspx">Últimos movimientos</a></li>
+        <li><a href="/Portal-Afiliado/Mi-cuenta/Cartola/Cartola-resumen.aspx">Cartola resumen</a></li>  <!--Certificados-->
+        <li><a href="#">Certificados</a>
+            <ul class="sub-menu">
+                <li><a href="/Portal-Afiliado/Certificados/Certificados.aspx">Afiliación</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Certificados.aspx">Antecedentes Previsionales</a></li>
+                <li><a href="/Portal-Afiliado/Mi-cuenta/Pensionado/Certificado-pension.aspx">Liquidación de Pensiones</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Certificados-oferta/Certificado-oferta.aspx">Certificado de Oferta</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Cotizaciones.aspx">Cotizaciones</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Remuneraciones.aspx">Remuneraciones</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Certificados.aspx">Vacaciones Progresivas</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Movimientos.aspx">Movimientos</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Tributarios.aspx">Tributarios</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Periodos-no-cotizados.aspx">Periodos no Cotizados</a></li>
+                <li><a href="/Portal-Afiliado/Certificados/Certificados.aspx">Ver todos</a></li>
+            </ul> </li> <!--Operaciones-->
+        <li><a href="#">Operaciones</a>
+            <ul class="sub-menu">
+                <li><a href="/Portal-Afiliado/Operaciones/Cambiar-de-Fondo/Cambio-de-fondo-Paso1.aspx">Cambiar de fondo</a></li>
+                <li><a href="/Portal-Afiliado/Operaciones/Distribuir-fondos/Distribuir-fondos-Paso1.aspx">Distribuir fondo</a></li>
+                <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Efectuar-giro-en-APV-paso1.aspx">Girar desde mi APV</a></li>
+                <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Efectuar-giro-en-Cuenta-2-Paso1.aspx">Girar desde mi Cuenta 2</a></li>
+                <li><a href="/Portal-Afiliado/Operaciones/Mi-Cuenta-Bancaria/Cuenta-Bancaria-Default.aspx">Mi Cuenta Bancaria</a></li>
+                <li><a href="/Portal-Afiliado/Operaciones/Herramientas/Guia-para-elegir-tu-fondo-paso1.aspx">Guía para elegir tu multifondo</a></li>
+                <li><a href="/Portal-Afiliado/Operaciones/Simulador-de-pensiones-Paso1.aspx">Simulador de pensiones</a></li>
+                <li><a href="/Portal-Afiliado/Operaciones/Diversificacion/diversificacion-Paso1.aspx">¿Cómo están invertidos mis ahorros?</a></li>
+                <li><a href="/Portal-Afiliado/Operaciones/Estado-online-de-tramites/Estado-online-de-tramites.aspx">Seguimiento de mis trámites <span class="label label-success">Nuevo</span></a></li>
+            </ul> </li> <!--Productos Voluntarios-->
+        <li><a href="#">Productos Voluntarios</a>
+            <ul class="sub-menu">
+                <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Que-es-el-APV.aspx">Ahorro Previsional Voluntario (APV)</a>
+                    <ul class="sub-menu">
+                        <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Que-es-el-APV.aspx">¿Qué es el APV?</a></li>
+                        <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Mi-APV/Detalles.aspx">Mi APV</a></li>
+                        <li id="li_ABRIR_APV_MOBILE"><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Mi-APV/Abrir-un-APV-Paso1.aspx" id="lnk_ABRIR_APV_MOBILE">Abrir un APV</a></li>
+                        <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Efectuar-giro-en-APV-paso1.aspx">Girar desde mi APV</a></li>
+                        <li><a href="/Portal-Afiliado/Operaciones/Mi-Cuenta-Bancaria/Cuenta-Bancaria-Default.aspx">Mi Cuenta Bancaria</a></li>
+                    </ul> </li>
+                <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Que-es-la-Cuenta-2.aspx">Cuenta 2</a>
+                    <ul class="sub-menu">
+                        <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Que-es-la-Cuenta-2.aspx">¿Qué es la cuenta 2?</a></li>
+                        <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Mi-Cuenta-2/Detalles.aspx">Mi Cuenta 2</a></li>
+                        <li><a target="_blank" href="/AFP/Productos/Para-Ahorrar-y-Mejorar-tu-Pension/Cuenta-2/Abrir-Cuenta2-Paso1.aspx">Abrir Cuenta 2</a></li>
+                        <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Efectuar-giro-en-Cuenta-2-Paso1.aspx">Girar desde mi Cuenta 2</a></li>
+                        <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Mandato-de-deposito-en-Cuenta-2/Mandato-deposito-Cuenta2-Paso1.aspx">Mandato de depósito en Cuenta 2</a>
+                            <ul class="sub-menu">
+                                <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Mandato-de-deposito-en-Cuenta-2/Mandato-deposito-Cuenta2-Paso1.aspx">Suscribir mandato</a></li>
+                                <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Mandato-de-deposito-en-Cuenta-2/Revocar-mandato-Cuenta2-Paso1.aspx">Revocar mandato</a></li>
+                            </ul> </li>
+                    </ul> </li>
+            </ul> </li> <!--Mis Datos y Claves-->
+        <li><a href="#">Mis datos y claves</a>
+            <ul class="sub-menu">
+                <li><a href="/Portal-Afiliado/Beneficiarios/Beneficiarios-paso1.aspx">Mis beneficiarios <span class="label label-success">Nuevo</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="/Portal-Afiliado/Beneficiarios/Beneficiarios-paso1.aspx">Conoce qué son tus beneficiarios</a></li>
+                        <li><a href="/Portal-Afiliado/Beneficiarios/Beneficiarios-paso4.aspx">Ver mis beneficiarios</a></li>
+                        <li><a href="/Portal-Afiliado/Beneficiarios/Beneficiarios-paso2.aspx">Registrar a mis beneficiarios</a></li>
+                    </ul> </li>
+                <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Modificar-datos-personales.aspx">Modificar datos personales</a></li>
+                <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Cambiar-Clave-de-Acceso-Web.aspx">Cambiar Clave de Acceso Web</a></li>
+                <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Que-es-y-como-obtengo-la-clave-de-seguridad.aspx">Clave de Seguridad</a>
+                    <ul class="sub-menu">
+                        <li id="li_MENU_SACU_MOBILE"><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Solicitar-Clave-de-Seguridad/Elegir-medio-de-entrega.aspx">Solicitar Clave de Seguridad</a></li>
+                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Crear-Clave-de-Seguridad/Crear-Clave-de-Seguridad-Paso1.aspx">Crear Clave de Seguridad</a></li>
+                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Activar-Clave-de-Seguridad/Activar-Clave-de-Seguridad-Paso1.aspx">Activar Clave de Seguridad</a></li>
+                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Ajustes-en-Clave-de-Seguridad/Recuperar-Clave-de-Seguridad-Paso2.aspx">Recuperar clave de Seguridad</a></li>
+                    </ul> </li>
+                <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Ajustes-en-Clave-de-Seguridad/Elegir-accion.aspx">Ajustes en Clave de Seguridad</a></li>
+            </ul> </li> <!--Centro de contacto-->
+        <li><a href="#">Centro de contacto</a>
+            <ul class="sub-menu">
+                <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Contactanos.aspx">Contáctanos</a></li>
+                <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Contactanos-por-telefono.aspx">Contáctanos por teléfono</a></li>
+                <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Sucursales.aspx">Sucursales</a></li>
+                <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Redes-sociales.aspx">Redes sociales</a></li>
+                <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Reclamos-Normativos.aspx">Reclamos</a></li>
+            </ul> </li>
+        <li><span style="width: 50px; background-repeat: no-repeat; background-position: center center; display: block;
+                position: relative; top: -14px; left: -15px; float: left; background-color: #77b700;
+                height: 45px; width: 35px; background-size: 20px; text-align:center; font-size:20px; font-weight:500; padding-top:11px;"> <a href="/Portal-Afiliado/Notificaciones/Notificaciones.aspx"> <span id="lbl_contador_movil">1</span></a></span> <p style="margin-bottom: 0px; text-align: left;"> <a href="/Portal-Afiliado/Notificaciones/Notificaciones.aspx">Mis notificaciones</a> </p> </li>
+        <li><span style="width: 50px; background-image: url(/Portal-Afiliado/Media/imgs/iconousuariomobile.png);
+                background-repeat: no-repeat; background-position: center center; display: block;
+                position: relative; top: -14px; left: -15px; float: left; background-color: #77b700;
+                height: 57px; width: 35px; background-size: 20px;"></span><a href="#"><span id="Bienvenida_Afiliado_Mob">Bienvenida, <p></p>Paula Nicole González</span></a></li>
+        <li><span style="width: 50px; background-image: url(/Portal-Afiliado/Media/imgs/iconocerrarmobile.png);
+                background-repeat: no-repeat; background-position: center center; display: block;
+                position: relative; top: -14px; left: -15px; float: left; background-color: #DA0000;
+                height: 45px; width: 35px; background-size: 20px;"></span><a href="#"></a> <p style="margin-bottom: 0px; text-align: left;"> <a href="https://www.afpmodelo.cl/AFP/Home.aspx">Cerrar sesión</a> </p> </li>
+    </ul>
+</div> <!--fin menu mobile-->
+<script type="text/javascript">
+    jQuery('#menu').menufication({
+        direction: 'left',
+        toggleElement: "kk",
+        theme: 'dark',
+        addHomeLink: false,
+        hideDefaultMenu: true,
+        enableSwipe: true,
+        addHomeText: "Menu",
+        enableMultiple: true,
+        multipleContentElement: '#multiple-content',
+        multipleToggleElement: '#togglebutton'
+    });
+</script>
+<div id="wrap">
+    <form method="post" action="./Estado-de-cuenta.aspx" id="form1" enctype="multipart/form-data">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTk4MzI2MzM2NQ9kFgJmD2QWFgIBDw8WAh4EVGV4dAUBMWRkAgIPDxYCHwAFFlBhdWxhIE5pY29sZSBHb256w6FsZXpkZAIDDw8WAh8ABQExZGQCBQ8WAh4HVmlzaWJsZWgWBAIBDxYCHwFoZAIDDxYCHwFoZAIGDxYCHwFnZAIHDw8WAh8ABQExZGQCCA8WAh4JaW5uZXJodG1sBSdCaWVudmVuaWRhLCA8cCAvPlBhdWxhIE5pY29sZSBHb256w6FsZXpkAgkPZBYUAgEPDxYCHwAFDzAwMDAwMDE4Njk3MTg2OGRkAgMPFgIeBGhyZWYFTS9Qb3J0YWwtQWZpbGlhZG8vT3BlcmFjaW9uZXMvQWhvcnJvLVByZXZpc2lvbmFsLVZvbHVudGFyaW8vUXVlLWVzLWVsLUFQVi5hc3B4ZAIHDxYCHwMFTS9Qb3J0YWwtQWZpbGlhZG8vT3BlcmFjaW9uZXMvQWhvcnJvLVByZXZpc2lvbmFsLVZvbHVudGFyaW8vUXVlLWVzLWVsLUFQVi5hc3B4ZAIJDxYCHwMFTS9Qb3J0YWwtQWZpbGlhZG8vT3BlcmFjaW9uZXMvQWhvcnJvLVByZXZpc2lvbmFsLVZvbHVudGFyaW8vUXVlLWVzLWVsLUFQVi5hc3B4ZAINDxYCHwFoZAIPDxYCHwFoZAIRDxYCHwFoZAITDxYCHwFnZAIVDxYCHwFoZAIXD2QWNGYPDxYCHwAFDzAwMDAwMDE4Njk3MTg2OGRkAgIPFgIfAWhkAgQPFgIfAWhkAgUPFgIfAWgWBgIDDxYCHwIFBVBhdWxhZAIFDxYCHwIFH3BhdWxhLm5pY29sZS5nb256YWxlekBnbWFpbC5jb21kAg8PFgIfAWhkAgYPFgIfAWgWBAIDDxYCHwIFBVBhdWxhZAINDxYCHwFoZAIHDxYCHwFoFgICAw8WAh8CBQVQYXVsYWQCCA8WAh8BaGQCCQ8WAh8BaGQCCg8WAh8CBa0FPGg0IGNsYXNzPSdjb2wteHMtNiB0aXRfdGFibGEnPk1pIEN1ZW50YSBPYmxpZ2F0b3JpYTwvaDQ+PGJyIC8+PHRhYmxlIGNsYXNzPSd0YWJsZSB0YWJsZS1ib3JkZXJlZCB0YWJsZS1zdHJpcGVkJz48dGhlYWQ+PHRyPjx0aCB3aWR0aD0nMzAlJyBjbGFzcz0ndGFibGFfY2FiZWNlcmEgdGV4dC1jZW50ZXInPlZhbG9yIGN1b3RhIGFsIDEzLTA0LTIwMjA8L3RoPjx0aCBjbGFzcz0ndGFibGFfY2FiZWNlcmEgdGV4dC1jZW50ZXInPkZvbmRvPC90aD48dGggd2lkdGg9JzE1JScgY2xhc3M9J3RhYmxhX2NhYmVjZXJhIHRleHQtY2VudGVyJz5DdW90YXM8L3RoPjx0aCB3aWR0aD0nMTUlJyBjbGFzcz0ndGFibGFfY2FiZWNlcmEgdGV4dC1jZW50ZXInPlBlc29zICgkKTwvdGg+PC90cj48L3RoZWFkPjx0cj48dGQ+JCAzOC43OTAsOTY8L3RkPjx0ZD48c3BhbiBjbGFzcz0nZm9uZG9iJz48L3NwYW4+Umllc2dvc288L3RkPjx0ZD45OCwyMDwvdGQ+PHRkPiQgMy44MDkuMjcyPC90ZD48L3RyPjx0cj48dGQgY29sc3Bhbj0nMycgY2xhc3M9J3R4dF90b3RhbF9haG9ycmFkbyc+VG90YWwgYWhvcnJhZG8gZW4gdHUgQ3VlbnRhIE9ibGlnYXRvcmlhPC90ZD48dGQgY2xhc3M9J3R4dF90b3RhbF9haG9ycmFkbycgc3R5bGU9J3RleHQtYWxpZ246IGxlZnQ7Jz4kIDMuODA5LjI3MjwvdGQ+PC90cj48L3RhYmxlPjxiciAvPmQCCw8WAh8BZ2QCDQ8WAh8BaGQCDw8WAh8BaGQCEQ8WAh8BaGQCEw8WAh8BaGQCFA9kFgQCAQ8WAh8BaGQCBQ8WAh8BaGQCFg8WAh8BaGQCFw8WAh8BaBYEAgEPZBYCAgEPFgIfAgUFUGF1bGFkAgMPZBYCAgEPFgIfAgUkIG1pJiMyMzM7cmNvbGVzLCAxNSBkZSBhYnJpbCBkZSAyMDIwZAIYDxYCHwFoZAIZDxYCHwFoFgICAw9kFgICAQ8WAh8CBSQgbWkmIzIzMztyY29sZXMsIDE1IGRlIGFicmlsIGRlIDIwMjBkAhoPFgIfAWhkAhsPFgIfAWgWAgIDD2QWAgIBDxYCHwIFH3BhdWxhLm5pY29sZS5nb256YWxlekBnbWFpbC5jb21kAhwPFgIfAWhkAh0PFgIfAWhkAh4PFgIfAWhkAh8PFgIfAWgWAgIDDxYCHwIFBVBhdWxhZAIgDxYCHwFoZAIKDxYCHwIFBWFicmlsZAILDxYCHwIFBDIwMjBkAgwPDxYCHwAFCUFGUC1XRUIwMWRkZLMBMpnGWPRL6UNomKiF552TkMgm">
+        </div>
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+        <script src="/WebResource.axd?d=fbmBMzNTpwwR7JyJCzrk9TDznxexCZqqp6Wvh1wU-5enH2k0et7fSga98QuuErnsZ5XanSml5-MxXDGc50gWlaMrh5A1&amp;t=635823524460000000" type="text/javascript"></script>
+        <script src="/ScriptResource.axd?d=Ui_lX9fTcv8N01Jrw86qRPy8vqtqL4mNsyeACNUnIiHlv1AzSEmBjTKlZDbO7IqJV7wjTlOAuiCAggD0LHnZG0hHtxm_LvPfS3Ymz6B2YIcm-eiFQi7NeUXQiWEE8snopgBWM4NOn-WgjMJdrY9iqV4qP-A1&amp;t=ffffffffcc58dd65" type="text/javascript"></script>
+        <script src="/ScriptResource.axd?d=c9vQow4wOJN9lx4XAiomqiCqgBBw_EjIY1EhZy5eyQbWUFPYFmXGNlUVBWYGa4S7P3Czt8_6-2ToXbKSuuZUdEScGS7v0z24BCeTpUOyBfeRarU9M2lLJpDHKROQEFKQZ6dPkay35koC185awzSLSYQc0g9L3F574n27PyG6unVbKM9g0&amp;t=ffffffffcc58dd65" type="text/javascript"></script>
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9D83AB76">
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKuIemY1+r5YzyoCItD9+R5HKbmUqg8fNf6UXG0INyCAPr+LX/vR5ht8q8s58XVv120Jb3N">
+        </div> <!--===========================top=====================--> <!-- NAVBAR
+================================================== -->
+        <div id="topnavbar" style="margin-bottom: 20px;">
+            <div class="navbar navbar-default hidden-sm hidden-xs navbar-inverse" role="navigation" style="height: 41px; background-color: black; border-color: #292929; border-radius: 0px;">
+                <div class="container-fluid">
+                    <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+                    </div>
+                    <div class="navbar-collapse collapse box-menu">
+                        <div class="menu-centro">
+                            <ul class="nav navbar-nav"> <!--  Mi Cuenta-->
+                                <li class="dropdown2"><a href="/Portal-Afiliado/Mi-cuenta/Estado-de-cuenta.aspx" class="dropdown-toggle" data-toggle="dropdown">Mis ahorros<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Portal-Afiliado/Mi-cuenta/Estado-de-cuenta.aspx">Estado de cuenta</a></li>
+                                        <li><a href="/Portal-Afiliado/Mi-cuenta/Ultimos-movimientos.aspx">Últimos movimientos</a></li>
+                                        <li><a href="/Portal-Afiliado/Mi-cuenta/Cartola/Cartola-resumen.aspx">Cartola resumen</a></li>
+                                    </ul> </li> <!--  Certificados-->
+                                <li class="dropdown2"><a href="/Portal-Afiliado/Certificados/Certificados.aspx" class="dropdown-toggle" data-toggle="dropdown">Certificados<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Portal-Afiliado/Certificados/Certificados.aspx#AF">Afiliación</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Cotizaciones.aspx">Cotizaciones</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Certificados.aspx#AF">Antecedentes Previsionales</a></li>
+                                        <li><a href="/Portal-Afiliado/Mi-cuenta/Pensionado/Certificado-pension.aspx">Liquidación de Pensiones</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Certificados-oferta/Certificado-oferta.aspx">Certificado de Oferta</a></li>
+                                        <li><a href="/Portal-Afiliado/Mi-cuenta/Cartola/Cartola-resumen.aspx">Cartola resumen</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Remuneraciones.aspx">Remuneraciones</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Certificados.aspx#VP">Vacaciones Progresivas</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Movimientos.aspx">Movimientos</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Tributarios.aspx#TR">Tributarios</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Periodos-no-cotizados.aspx">Periodos no Cotizados</a></li>
+                                        <li><a href="/Portal-Afiliado/Certificados/Certificados.aspx">Ver todos</a></li>
+                                    </ul> </li> <!--  Operaciones-->
+                                <li class="dropdown2"><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Que-es-el-APV.aspx" id="lnk_OPERACIONES" class="dropdown-toggle" data-toggle="dropdown">Operaciones<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Portal-Afiliado/Operaciones/Cambiar-de-Fondo/Cambio-de-fondo-Paso1.aspx">Cambiar de fondo</a></li>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Distribuir-fondos/Distribuir-fondos-Paso1.aspx">Distribuir fondo</a></li>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Efectuar-giro-en-APV-paso1.aspx">Girar desde mi APV</a></li>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Efectuar-giro-en-Cuenta-2-Paso1.aspx">Girar desde mi Cuenta 2</a></li>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Mi-Cuenta-Bancaria/Cuenta-Bancaria-Default.aspx">Mi Cuenta Bancaria</a></li>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Herramientas/Guia-para-elegir-tu-fondo-paso1.aspx">Guía para elegir tu multifondo</a></li>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Simulador-de-pensiones-Paso1.aspx">Simulador de pensiones</a></li>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Diversificacion/diversificacion-Paso1.aspx">¿Cómo están invertidos mis ahorros?</a></li>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Estado-online-de-tramites/Estado-online-de-tramites.aspx">Seguimiento de mis trámites <span class="label label-success">Nuevo</span></a></li>
+                                    </ul> </li> <!--  Productos Voluntarios-->
+                                <li class="dropdown2"><a href="../#" id="A1" class="dropdown-toggle" data-toggle="dropdown">Productos Voluntarios<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Que-es-el-APV.aspx" id="lnk_APV">Ahorro Previsional Voluntario (APV) </a></li>
+                                        <ul class="subtmenu1 list-unstyled">
+                                            <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Que-es-el-APV.aspx">¿Qué es el APV?</a></li>
+                                            <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Que-es-el-APV.aspx" id="lnk_MI_APV">Mi APV</a> </li>
+                                            <li id="li_ABRIR_APV"><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Mi-APV/Abrir-un-APV-Paso1.aspx">Abrir APV</a></li>
+                                            <li><a href="/Portal-Afiliado/Operaciones/Ahorro-Previsional-Voluntario/Efectuar-giro-en-APV-paso1.aspx">Girar desde mi APV</a></li>
+                                        </ul>
+                                        <ul class="subtmenu1 list-unstyled">
+                                        </ul>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Que-es-la-Cuenta-2.aspx">Cuenta 2</a></li>
+                                        <ul class="subtmenu1 list-unstyled">
+                                            <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Que-es-la-Cuenta-2.aspx">¿Qué es la Cuenta 2?</a></li>
+                                            <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Mi-Cuenta-2/Detalles.aspx">Mi Cuenta 2</a></li>
+                                            <li><a target="_blank" href="/AFP/Productos/Para-Ahorrar-y-Mejorar-tu-Pension/Cuenta-2/Abrir-Cuenta2-Paso1.aspx">Abrir Cuenta 2</a></li>
+                                            <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Efectuar-giro-en-Cuenta-2-Paso1.aspx">Girar desde mi Cuenta 2</a></li>
+                                        </ul>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Mandato-de-deposito-en-Cuenta-2/Mandato-deposito-Cuenta2-Paso1.aspx">Mandato de depósito en Cuenta 2</a></li>
+                                        <ul class="subtmenu1 list-unstyled">
+                                            <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Mandato-de-deposito-en-Cuenta-2/Mandato-deposito-Cuenta2-Paso1.aspx">Suscribir mandato</a></li>
+                                            <li><a href="/Portal-Afiliado/Operaciones/Cuenta-2/Mandato-de-deposito-en-Cuenta-2/Revocar-mandato-Cuenta2-Paso1.aspx">Revocar mandato</a></li>
+                                        </ul>
+                                        <li><a href="/Portal-Afiliado/Operaciones/Mi-Cuenta-Bancaria/Cuenta-Bancaria-Default.aspx">Mi Cuenta Bancaria</a></li>
+                                    </ul> </li> <!--  Mis datos y claves-->
+                                <li class="dropdown2"><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Cambiar-Clave-de-Acceso-Web.aspx" class="dropdown-toggle" data-toggle="dropdown">Mis datos y claves<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" style="width: 405px;" role="menu">
+                                        <li><a href="/Portal-Afiliado/Beneficiarios/Beneficiarios-paso1.aspx">Mis beneficiarios <span class="label label-success">Nuevo</span></a>
+                                            <ul class="subtmenu1 list-unstyled">
+                                                <li><a href="/Portal-Afiliado/Beneficiarios/Beneficiarios-paso1.aspx">Conoce qué son tus beneficiarios</a></li>
+                                                <li><a href="/Portal-Afiliado/Beneficiarios/Beneficiarios-paso4.aspx">Ver mis beneficiarios</a></li>
+                                                <li><a href="/Portal-Afiliado/Beneficiarios/Beneficiarios-paso2.aspx">Registrar a mis beneficiarios</a></li>
+                                            </ul> </li>
+                                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Modificar-datos-personales.aspx">Modificar datos personales</a></li>
+                                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Cambiar-Clave-de-Acceso-Web.aspx">Cambiar Clave de Acceso Web</a></li>
+                                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Que-es-y-como-obtengo-la-clave-de-seguridad.aspx">Clave de Seguridad</a>
+                                            <ul class="subtmenu1 list-unstyled">
+                                                <li id="li_MENU_SACU"><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Solicitar-Clave-de-Seguridad/Elegir-medio-de-entrega.aspx">Solicitar Clave de Seguridad</a></li>
+                                                <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Crear-Clave-de-Seguridad/Crear-Clave-de-Seguridad-Paso1.aspx">Crear Clave de Seguridad</a></li>
+                                                <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Activar-Clave-de-Seguridad/Activar-Clave-de-Seguridad-Paso1.aspx">Activar Clave de Seguridad</a></li>
+                                                <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Ajustes-en-Clave-de-Seguridad/Recuperar-Clave-de-Seguridad-Paso2.aspx">Recuperar clave de Seguridad</a></li>
+                                            </ul> </li>
+                                        <li><a href="/Portal-Afiliado/Mis-datos-y-claves/Claves/Clave-de-Seguridad/Ajustes-en-Clave-de-Seguridad/Elegir-accion.aspx">Ajustes en Clave de Seguridad</a></li>
+                                    </ul> </li> <!--  Centro de contacto-->
+                                <li class="dropdown2"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Centro de contacto<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Contactanos.aspx">Contáctanos</a></li>
+                                        <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Contactanos-por-telefono.aspx">Contáctanos por teléfono</a></li>
+                                        <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Sucursales.aspx">Sucursales</a></li>
+                                        <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Redes-sociales.aspx">Redes Sociales</a></li>
+                                        <li><a href="/Portal-Afiliado/Contacto-y-reclamos/Reclamos-Normativos.aspx">Reclamos</a></li>
+                                    </ul> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- FIN NAVBAR
+================================================== --> <!-- Content
+================================================== -->
+        <script type="text/javascript">
+            //<![CDATA[
+            Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+            //]]>
+        </script>
+        <script src="/AFP/Media/js/jquery.Rut.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            //  VALIDACIONES EMAIL 1 ************************************************************************
+            //    validación email 1 de caracteres incorrectos
+            function email1(campo) {
+                //var expr = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+                var expr = ("^([A-Z|a-z]+[A-Z|a-z0-9._-]*)@{1}([A-Z|a-z0-9\.]{2,})\.([A-Z|a-z]{2,3})$");
+                $('.tooltip_EMAIL1').tooltipster({ animation: 'grow', theme: 'tooltipster-punk', trigger: 'custom', onlyOne: false, position: 'top', content: 'Ingresa un e-mail correcto' });
+                if (campo.value != '') {
+                    if (campo.value.match(expr)) {
+                        $("#ContentPlaceHolder1_txt_EMAIL1").removeClass("fieldError");
+                        $("#ContentPlaceHolder1_txt_EMAIL1").addClass("fieldCorrect");
+                        $('#div_EMAIL1').tooltipster('hide');
+                    } else {
+                        $("#ContentPlaceHolder1_txt_EMAIL1").removeClass("fieldCorrect");
+                        $("#ContentPlaceHolder1_txt_EMAIL1").addClass("fieldError");
+                        $('#div_EMAIL1').tooltipster('content', 'Ingresa un e-mail correcto');
+                        $('#div_EMAIL1').tooltipster('show');
+                    }
+                }
+            }
+            //  FIN VALIDACIONES EMAIL 1 *******************************************************************
+
+            //  VALIDACIONES EMAIL 2 ************************************************************************
+            //    validación email 2 de caracteres incorrectos
+            function email2(campo) {
+                //var expr = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+                //var expr = ("^([a-z]+[a-z0-9._-]*)@{1}([a-z0-9\.]{2,})\.([a-z]{2,3})$");
+                var expr = ("^([A-Z|a-z]+[A-Z|a-z0-9._-]*)@{1}([A-Z|a-z0-9\.]{2,})\.([A-Z|a-z]{2,3})$");
+                var em1 = document.getElementById("ContentPlaceHolder1_txt_EMAIL1");
+
+
+                $('.tooltip_EMAIL2').tooltipster({ animation: 'grow', theme: 'tooltipster-punk', trigger: 'custom', onlyOne: false, position: 'top', content: 'Ingresa un e-mail correcto' });
+                if (campo.value != '') {
+                    if (campo.value.match(expr)) {
+
+
+                        if (campo.value != em1.value) {
+                            $("#ContentPlaceHolder1_txt_EMAIL2").removeClass("fieldCorrect");
+                            $("#ContentPlaceHolder1_txt_EMAIL2").addClass("fieldError");
+                            $('#div_EMAIL2').tooltipster('content', 'E-mail no coincide');
+                            $('#div_EMAIL2').tooltipster('show');
+
+                        } else {
+
+                            $("#ContentPlaceHolder1_txt_EMAIL2").removeClass("fieldError");
+                            $("#ContentPlaceHolder1_txt_EMAIL2").addClass("fieldCorrect");
+                            $('#div_EMAIL2').tooltipster('hide');
+                        }
+                    } else {
+                        $("#ContentPlaceHolder1_txt_EMAIL2").removeClass("fieldCorrect");
+                        $("#ContentPlaceHolder1_txt_EMAIL2").addClass("fieldError");
+                        $('#div_EMAIL2').tooltipster('content', 'Ingresa un e-mail correcto');
+                        $('#div_EMAIL2').tooltipster('show');
+                    }
+                }
+            }
+
+            //  VALIDACIONES EMAIL 3 ************************************************************************
+            //    validación email 3 de caracteres incorrectos
+            function email3(campo) {
+                var expr = ("^([A-Z|a-z]+[A-Z|a-z0-9._-]*)@{1}([A-Z|a-z0-9\.]{2,})\.([A-Z|a-z]{2,3})$");
+                $('.tooltip_EMAIL3').tooltipster({ animation: 'grow', theme: 'tooltipster-punk', trigger: 'custom', onlyOne: false, position: 'top', content: 'Ingresa un e-mail correcto' });
+                if (campo.value != '') {
+                    if (campo.value.match(expr)) {
+                        $("#ContentPlaceHolder1_txt_EMAIL3").removeClass("fieldError");
+                        $("#ContentPlaceHolder1_txt_EMAIL3").addClass("fieldCorrect");
+                        $('#div_EMAIL3').tooltipster('hide');
+                    } else {
+                        $("#ContentPlaceHolder1_txt_EMAIL3").removeClass("fieldCorrect");
+                        $("#ContentPlaceHolder1_txt_EMAIL3").addClass("fieldError");
+                        $('#div_EMAIL3').tooltipster('content', 'Ingresa un e-mail correcto');
+                        $('#div_EMAIL3').tooltipster('show');
+                    }
+                }
+            }
+            //  FIN VALIDACIONES EMAIL 3 *******************************************************************
+
+            //  VALIDACIONES EMAIL 4 ************************************************************************
+            //    validación email 4 de caracteres incorrectos
+            function email4(campo) {
+                var expr = ("^([A-Z|a-z]+[A-Z|a-z0-9._-]*)@{1}([A-Z|a-z0-9\.]{2,})\.([A-Z|a-z]{2,3})$");
+                var em2 = document.getElementById("ContentPlaceHolder1_txt_EMAIL3");
+
+                $('.tooltip_EMAIL4').tooltipster({ animation: 'grow', theme: 'tooltipster-punk', trigger: 'custom', onlyOne: false, position: 'top', content: 'Ingresa un e-mail correcto' });
+                if (campo.value != '') {
+                    if (campo.value.match(expr)) {
+
+                        if (campo.value != em2.value) {
+                            $("#ContentPlaceHolder1_txt_EMAIL4").removeClass("fieldCorrect");
+                            $("#ContentPlaceHolder1_txt_EMAIL4").addClass("fieldError");
+                            $('#div_EMAIL4').tooltipster('content', 'E-mail no coincide');
+                            $('#div_EMAIL4').tooltipster('show');
+
+                        } else {
+
+                            $("#ContentPlaceHolder1_txt_EMAIL4").removeClass("fieldError");
+                            $("#ContentPlaceHolder1_txt_EMAIL4").addClass("fieldCorrect");
+                            $('#div_EMAIL4').tooltipster('hide');
+                        }
+                    } else {
+                        $("#ContentPlaceHolder1_txt_EMAIL4").removeClass("fieldCorrect");
+                        $("#ContentPlaceHolder1_txt_EMAIL4").addClass("fieldError");
+                        $('#div_EMAIL4').tooltipster('content', 'Ingresa un e-mail correcto');
+                        $('#div_EMAIL4').tooltipster('show');
+                    }
+                }
+            }
+
+            // FIN VALIDACIONES EMAIL 2 ************************************************************************
+
+        </script> <!-- DETALLE PAGINA
+================================================== -->
+        <div class="container">
+            <div class="col-md-9 padding0">
+                <ol class="breadcrumb hidden-xs">
+                    <li><a href="Estado-de-cuenta.aspx">Mi cuenta</a></li>
+                    <li><a href="Estado-de-cuenta.aspx">Estado de cuenta</a></li>
+                </ol>
+            </div>
+            <div class="col-md-12 padding0">
+                <h2 class="nombre_pagina text-left"> Estado de cuenta</h2>
+            </div>
+        </div> <!-- FIN DETALLE PAGINA
+================================================== -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.EMAIL2BLOQUEO').bind("cut copy paste", function (e) {
+                    e.preventDefault();
+                });
+            });
+        </script> <!-- Notificacion
+================================================== -->
+        <div id="ContentPlaceHolder1_div_NOTIFICACION" class="mensaje1 animated fadeInUp">
+            <div class=" container contnotificacion">
+                <div class="col-lg-10 col-lg-offset-1 alert alert-success notifica"> <button type="button" class="close" data-dismiss="alert" aria-hidden="true"> ×</button>
+                    <div class="mensaje">
+                        <div class="iconotoficacion"> <span class="afpmodelo iconocolorverde margintop20">F</span>
+                        </div>
+                        <p class="marginleft15 paddingtop20"> ¡Buena noticia! La comisión asociada a la administración de tus fondos es solo de 0,77%. </p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- FIN Notificacion
+================================================== --> <!-- Modal Cambio email --> <!-- Fin Modal Cambio email --> <!-- Modal Registro email --> <!-- Fin Modal Registro email --> <!-- Modal Notificacion APS -->
+        <div class="container">
+            <div class="noticia col-lg-12">
+            </div>
+        </div> <!-- FIN Modal Notificacion APS -->
+        <div class="container">
+            <div id="ContentPlaceHolder1_Div_CCO" class="col-xs-12">
+                <h4 class="col-xs-6 tit_tabla">Mi Cuenta Obligatoria</h4>
+                <br>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th width="30%" class="tabla_cabecera text-center">Valor cuota al 13-04-2020</th>
+                        <th class="tabla_cabecera text-center">Fondo</th>
+                        <th width="15%" class="tabla_cabecera text-center">Cuotas</th>
+                        <th width="15%" class="tabla_cabecera text-center">Pesos ($)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>$ 38.790,96</td>
+                        <td><span class="fondob"></span>Riesgoso</td>
+                        <td>98,20</td>
+                        <td>$ 3.809.272</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="txt_total_ahorrado">Total ahorrado en tu Cuenta Obligatoria</td>
+                        <td class="txt_total_ahorrado" style="text-align: left;">$ 3.809.272</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+            <div id="ContentPlaceHolder1_div_BOTON_CF_CCO" class="col-xs-12"> <a class="clictoaction marginleft10" href="/Portal-Afiliado/Operaciones/Distribuir-fondos/Distribuir-fondos-Paso1.aspx">Distribuir fondos</a>
+                <input type="submit" name="ctl00$ContentPlaceHolder1$btn_CAMBIO_FONDO_CCO" value="Cambiar de fondo" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btn_CAMBIO_FONDO_CCO&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_btn_CAMBIO_FONDO_CCO" type="button" class="clictoaction">
+            </div>
+            <div id="ContentPlaceHolder1_Div_CAV" class="col-xs-12">
+            </div>
+            <div id="ContentPlaceHolder1_Div_CCV" class="col-xs-12">
+            </div>
+            <div id="ContentPlaceHolder1_Div_CDC" class="col-xs-12">
+            </div>
+            <div id="ContentPlaceHolder1_Div_CVC" class="col-xs-12">
+            </div>
+            <div id="ContentPlaceHolder1_Div_CAI" class="col-xs-12">
+                <div id="ContentPlaceHolder1_Div_CAF" class="col-xs-12">
+                </div>
+                <br>
+                <br>
+            </div>
+            <div id="ContentPlaceHolder1_div_CONTEXTUALES" class="contextuales">
+                <div class="container"> <!--cartola_resumen-->
+                    <div class="col-xs-6 cartola_resumen animated pulse loop2">
+                        <li class="icono icon-vercartola"></li> <a href="/Portal-Afiliado/Mi-cuenta/Cartola/Cartola-resumen.aspx">Ver cartola resumen</a>
+                    </div> <!--cartola_resumen-->
+                    <div class="col-xs-6 cartola_resumen animated pulse loop2">
+                        <li class="icono icon-cartolaresumen2"></li> <a href="/Portal-Afiliado/Operaciones/Distribuir-fondos/Distribuir-fondos-Paso1.aspx"> Distribuir fondo</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- BARRA SP -->
+        <div style="height: 83px; background-color: #f5f6f7; width: 100%; font-size: 14px;
+		color: #717171; margin-top: 50px; margin-bottom: -49px;">
+            <div class="col-lg-2" style="padding-left: 200px;">
+                <img src="/AFP/Media/imgs/iso-sp.png" alt="">
+            </div>
+            <div class="col-lg-10" style="margin-top: 26px; padding-left: 170px;">
+                <p> Entrega tu opinión a la SUPERINTENDENCIA DE PENSIONES sobre la calidad de servicio de tu AFP, <a href="https://es.research.net/r/spensiones" target="_blank">comienza aquí</a>.</p>
+            </div>
+        </div> <!-- FIN BARRA SP --> <!-- MODAL CAMBIO EMAIL EXITOSO --> <!-- FIN MODAL CAMBIO EMAIL EXITOSO --> <!-- MODAL REGISTRO EMAIL EXITOSO --> <!-- FIN MODAL REGISTRO EMAIL EXITOSO --> <!-- MODAL HEMOS ENTENDIDO --> <!-- FIN MODAL HEMOS ENTENDIDO --> <!-- MODAL IMPORTANTE --> <!-- FIN MODAL IMPORTANTE --> <!-- modals ------------------------------------> <!-- modal 1 --> <!--fin modal 1 --> <!-- Modal Registro Beneficiarios --> <!-- Fin Modal Cambio email --> <!-- modal 2 --> <!--fin modal 2 -->
+        <script type="text/javascript">
+            //<![CDATA[
+            if (document.addEventListener) { window.addEventListener('load', function(event) { if(window.hasModBot==='1') removeAuthToken(); }, false); } else if (document.attachEvent) { window.attachEvent('load', function(event) { if(window.hasModBot==='1') removeAuthToken(); }, false); };//]]>
+        </script>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $(".dropdown2").hover(
+                function () {
+                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("400");
+                    $(this).toggleClass('open');
+                },
+                function () {
+                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideUp("400");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+    </script>
+</div> <!--fin wrap--> <!-- Footer
+================================================== -->
+<div class="footercont marginfooterup hidden-print">
+    <div class="container">
+        <div class="col-lg-12 padding0 footer">
+            <div class="col-lg-12 logofooter"> <a href="../AFP/Home.aspx" target="_blank"> <img src="/AFP/Media/imgs/afp_modelo_gris.png" width="149" height="26" alt=""></a>
+            </div>
+            <ul class="col-sm-15 col-md-2 col-lg-2 txtfooter list-unstyled">
+                <li class="txtsubfooter marginbottom20">Nosotros </li>
+                <li class="marginbottom10"><a href="/AFP/Nosotros/AFP-Modelo.aspx" target="_blank">AFP Modelo</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Nosotros/Memoria-Anual.aspx" target="_blank">Memoria anual</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Nosotros/Estados-Financieros.aspx" target="_blank">Estados financieros</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Nosotros/Politica-y-Estatutos.aspx" target="_blank">Políticas y estatutos</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Nosotros/Trabaja-con-Nosotros.aspx" target="_blank">Trabaja con nosotros</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Nosotros/Practicas-de-Gobiernos-Corporativos.aspx" target="_blank">Prácticas de gobiernos corporativos</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Nosotros/Directorio.aspx" target="_blank">Directorio y Administración</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Nosotros/Sala-de-Prensa.aspx" target="_blank">Sala de Prensa</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Mapa-del-Sitio/Mapa-del-Sitio.aspx" target="_blank">Mapa del sitio</a> </li>
+            </ul>
+            <ul class="col-sm-15 col-md-2 col-lg-2 txtfooter bordeleft fixfootersocial list-unstyled ">
+                <li class="txtsubfooter marginbottom20">Sistema de pensiones</li>
+                <li class="marginbottom10"><a href="/AFP/Sistema-de-pensiones/Multifondos.aspx" target="_blank">Multifondos</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Sistema-de-pensiones/Estructura-de-Comisiones.aspx" target="_blank">Estructura de comisiones</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Centro-de-ayuda/Herramientas/Simulador-de-pensiones-Paso1.aspx" target="_blank">Simulador de pensiones</a> </li>
+            </ul>
+            <ul class="col-sm-15 col-md-2 col-lg-2 txtfooter bordeleft list-unstyled">
+                <li class="txtsubfooter marginbottom20">Indicadores</li>
+                <li class="marginbottom10"><a href="/AFP/Indicadores/Valor-Cuota.aspx" target="_blank">Valor cuota</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Indicadores/Tabla-de-Impuestos.aspx" target="_blank">Tablas de impuestos</a> </li>
+                <li class="marginbottom10"><a href="/AFP/Indicadores/Indicadores-Economicos.aspx" target="_blank">Indicadores económicos</a> </li>
+            </ul>
+            <ul class="col-sm-15 col-md-3 col-lg-3 txtfooter bordeleft paddingright20 list-unstyled">
+                <li class="txtsubfooter marginbottom20">Links de interés </li>
+                <li class="marginbottom10"><a href="http://www.ips.gob.cl/servlet/internet/content/1421810798237/subsidios-cotizacion-trabajadores-jovenes" target="_blank">Subsidio Previsional del Trabajador Joven</a> </li>
+                <li class="marginbottom10"><a href="https://www.previred.com/" target="_blank">PREVIRED</a> </li>
+                <li class="marginbottom10"><a href="http://www.safp.cl/portal/institucional/578/w3-channel.html" target="_blank">Superintendencia de Pensiones</a> </li>
+                <li class="marginbottom10"><a href="http://www.afcchile.cl/publico/index.html" target="_blank">Administradora de fondos de cesantía</a> </li>
+            </ul>
+            <ul class="col-sm-15 col-md-3 col-lg-3 txtfooter bordeleft fixfootersocial paddingright0 pull-left list-unstyled ">
+                <li class="txtsubfooter marginbottom20">Estamos para ayudarte </li>
+                <li class="facebook marginbottom10"><a href="https://www.facebook.com/AFPmodelocl" target="_blank">Hazte fan</a> </li>
+                <li class="footersocial twitter marginbottom10 paddingleft15"><a href="https://twitter.com/AFPModelocl" target="_blank">Síguenos</a> </li>
+                <li class="youtube marginbottom10 paddingleft15"><a href="https://www.youtube.com/channel/UCBisAf44YqxZNZCn8UNd7zg" target="_blank">Míranos</a> </li>
+                <li class="footersocial escribenos marginbottom10 paddingleft15"><a href="/Portal-Afiliado/Contacto-y-reclamos/Contactanos.aspx">Escríbenos</a> </li>
+                <li class="footersocial sucursales marginbottom10 paddingleft15"><a href="/AFP/Canales-de-atencion/Sucursales.aspx" target="_blank">Sucursales</a> </li>
+                <li class="footersocial fono2 marginbottom10 paddingleft15"><a href="tel:600 828 7200" style="text-decoration: blink; color: #fff;">600 828 7200</a></li>
+                <li class="footersocial fono1 marginbottom10 paddingleft15"><a href="tel:2 2828 7200" style="text-decoration: blink; color: #fff;">2 2828 7200</a></li>
+            </ul>
+            <div class="col-md-11 col-sm-10 col-xs-12">
+                <p class="txtotrasafp"> Variación de sueldo se expresa a través de sueldo líquido. La rentabilidad es variable, por lo que nada garantiza que las rentabilidades pasadas se repitan en el futuro. Infórmese sobre la rentabilidad de su Fondo de Pensiones, las comisiones y la calidad de servicio de las AFP en el sitio web de la Superintendencia de Pensiones: www.spensiones.cl. Estructura de comisiones por depósitos de cotizaciones vigentes a <span id="mes_disclaimer">abril</span>&nbsp;de <span id="anio_disclaimer">2020</span> &nbsp; - Capital: 1,44%, Cuprum: 1,44%, Habitat: 1,27%, Modelo: 0,77%, Planvital: 1,16%, Provida: 1,45%, Uno 0,69% - Para depósitos de cotizaciones de afiliados dependientes, independientes y voluntarios. Fuente: Superintendencia de Pensiones. Todas las transacciones y operaciones de este sitio web están sujetas a horario de Chile Continental. </p>
+                <p class="txtotrasafp"> Todas las transacciones y operaciones de este sitio web están sujetas a horario de Chile Continental.</p>
+                <p class="txtotrasafp"> © 2020 AFP Modelo. Todos los Derechos Reservados. </p>
+            </div>
+            <div class="col-md-1 col-xs-4 margintop20 text-center"> <a href="https://seal.digicert.com/seals/popup/?tag=Fre-5rqx&amp;url=www.afpmodelo.cl&amp;lang=es_ES&amp;cbr=1413294047471" target="_blank"> <img src="/AFP/Media/imgs/certificadoop.png" width="70" height="81" alt=""></a> <span class="ssl"><a class="blanco" href="http://www.digicert.com" target="_blank" style="font-size: 10px; color: White;">SSL Certificate</a></span>
+            </div>
+        </div>
+    </div> <span id="Servidor">AFP-WEB01</span>
+</div> <!-- Bootstrap core JavaScript
+    ================================================== --> <!-- Placed at the end of the document so the pages load faster -->
+<script src="/Portal-Afiliado/Media/js/bootstrap.min.js"></script>
+<script src="/Portal-Afiliado/Media/js/holder.js"></script>
+<script src="/Portal-Afiliado/Media/js/transition.js"></script>
+<script src="/Portal-Afiliado/Media/js/tooltip.js"></script>
+<script src="/Portal-Afiliado/Media/js/collapse.js"></script>
+<script src="/Portal-Afiliado/Media/js/dropdown.js"></script>
+<script src="/Portal-Afiliado/Media/js/funciones.js"></script>
+<script src="/Portal-Afiliado/Media/js/pace.js"></script>
+<script src="/Portal-Afiliado/Media/js/jquery.tooltipster.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script src="/Portal-Afiliado/Media/js/jquery.tooltipster.min.js"></script>
+<script src="/Portal-Afiliado/Media/js/custom-file-input.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="/Portal-Afiliado/Media/js/jquery-ui.js"></script> <!-- //////Script para desplegar menu//////-->
+<script>
+    (function ($, window, delay) {
+
+        var theTimer = 0;
+        var theElement = null;
+        var theLastPosition = { x: 0, y: 0 };
+        $('[data-toggle]')
+            .closest('li')
+            .on('mouseenter', function (inEvent) {
+                if (theElement) theElement.removeClass('open');
+                window.clearTimeout(theTimer);
+                theElement = $(this);
+
+                theTimer = window.setTimeout(function () {
+                    theElement.addClass('open');
+                }, delay);
+            })
+            .on('mousemove', function (inEvent) {
+                if (Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 ||
+                    Math.abs(theLastPosition.y - inEvent.ScreenY) > 4) {
+                    theLastPosition.x = inEvent.ScreenX;
+                    theLastPosition.y = inEvent.ScreenY;
+                    return;
+                }
+
+                if (theElement.hasClass('open')) return;
+                window.clearTimeout(theTimer);
+                theTimer = window.setTimeout(function () {
+                    theElement.addClass('open');
+                }, delay);
+            })
+            .on('mouseleave', function (inEvent) {
+                window.clearTimeout(theTimer);
+                theElement = $(this);
+                theTimer = window.setTimeout(function () {
+                    theElement.removeClass('open');
+                }, delay);
+            });
+    })(jQuery, window, 100);
+</script> <!--  popOver -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".popover-examples a").popover({
+            placement: 'top'
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#archivosadjuntos').hover(function () {
+            $('#opcionesfile').fadeIn();
+        }, function () {
+
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (window.location.hash) {
+            //bind to scroll function
+            $(document).scroll(function () {
+                var hash = window.location.hash
+                var hashName = hash.substring(1, hash.length);
+                var element;
+
+                //if element has this id then scroll to it
+                if ($(hash).length != 0) {
+                    element = $(hash);
+                }
+                //catch cases of links that use anchor name
+                else if ($('a[name="' + hashName + '"]').length != 0) {
+                    //just use the first one in case there are multiples
+                    element = $('a[name="' + hashName + '"]:first');
+                }
+
+                //if we have a target then go to it
+                if (element != undefined) {
+                    window.scrollTo(0, element.position().top);
+                }
+                //unbind the scroll event
+                $(document).unbind("scroll");
+
+            });
+        }
+
+    });
+
+</script> <!--<script type="text/javascript">
+});
+</script>--> <!--loader-->
+<script>
+    var loader = document.getElementById('la-anim-6-loader')
+        , border = document.getElementById('la-anim-6-border')
+        , α = 0
+        , π = Math.PI
+        , t = 15
+
+        , tdraw;
+
+    function PieDraw() {
+        α++;
+        α %= 360;
+        var r = (α * π / 180)
+            , x = Math.sin(r) * 250
+            , y = Math.cos(r) * -250
+            , mid = (α > 180) ? 1 : 0
+            , anim = 'M 0 0 v -250 A 250 250 1 '
+            + mid + ' 1 '
+            + x + ' '
+            + y + ' z';
+
+        loader.setAttribute('d', anim);
+        border.setAttribute('d', anim);
+        if (α != 0)
+            tdraw = setTimeout(PieDraw, t); // Redraw
+    }
+
+    function PieReset() {
+        clearTimeout(tdraw);
+        var anim = 'M 0 0 v -250 A 250 250 1 0 1 0 -250 z';
+        loader.setAttribute('d', anim);
+        border.setAttribute('d', anim);
+    }
+
+    var inProgress = false;
+
+    Array.prototype.slice.call(document.querySelectorAll('#la-buttons > button')).forEach(function (el, i) {
+        var anim = el.getAttribute('data-anim'),
+            animEl = document.querySelector('.' + anim);
+
+        el.addEventListener('click', function () {
+            if (inProgress) return false;
+            inProgress = true;
+            classie.add(animEl, 'la-animate');
+
+            if (anim === 'la-anim-6') {
+                PieDraw();
+            }
+
+            setTimeout(function () {
+                classie.remove(animEl, 'la-animate');
+
+                if (anim === 'la-anim-6') {
+                    PieReset();
+                }
+
+                inProgress = false;
+            }, 6000);
+        });
+    });
+</script>
+</body>
+</html>
